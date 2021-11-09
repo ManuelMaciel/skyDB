@@ -11,7 +11,7 @@ export const create = async (options = {}) => {
       ...options,
       id: genId
     }
-
+    console.log(database)
     await fs.writeJSON(database, [...storage, updateOptions])
   } catch (error) {
     return handleError(error)
