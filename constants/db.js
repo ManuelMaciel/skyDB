@@ -1,6 +1,4 @@
-import { homedir } from 'os'
 import path from 'path'
+import { projectpath } from '../projectpath'
 
-const home = homedir()
-export const fullPath = path.join(home, '/skyDB')
-export const database = path.join(home, '/skyDB/db.json')
+export const fullPath = path.join(projectpath, '/skyDB')
