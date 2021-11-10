@@ -1,6 +1,6 @@
 import fs from 'fs-extra'
 
-import { handleError } from '../../utils'
+import { handleError, handleMessage } from '../../utils'
 import { fullPath } from '../../constants'
 
 export const getById = async (model, id) => {

@@ -8,7 +8,7 @@ import { create, connection, getById, getAll } from '../src/db'
 
 // getData()
 const getAllData = async () => {
-  const value = await getAll('users', {fieldName: 'jesus'})
+  const value = await getAll('users', {order: ['DESC', 'fieldName']})
   console.log(value)
 }
 

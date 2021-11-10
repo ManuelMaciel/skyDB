@@ -1,9 +1,9 @@
 import fs from 'fs-extra'
 
-import { handleError } from '../../utils'
+import { handleError, handleMessage } from '../../utils'
 import { fullPath } from '../../constants'
 
-export const getAll = async (model, where = {}) => {
+export const getAll = async (model, options) => {
   // validations
   if(!model){
     return handleMessage('model is required')
@@ -11,8 +11,8 @@ export const getAll = async (model, where = {}) => {
   if( typeof model !== 'string'){
     return handleMessage(`model must be of type "string" and the type provided is a ${typeof model}`)
   }
-  if( typeof where !== 'object'){
-    return handleMessage(`where must be of type "object" and the type provided is a ${typeof where}`)
+  if( typeof options !== 'object'){
+    return handleMessage(`options must be of type "object" and the type provided is a ${typeof options}`)
   }
   if(!fs.existsSync(`${fullPath}/${model}.json`)){
     return handleMessage(`the model ${model} does not exist`)
@@ -22,12 +22,26 @@ export const getAll = async (model, where = {}) => {
     let record;
     const storage = await fs.readJSON(`${fullPath}/${model}.json`)
     record = storage
-    if(where){
+    // where
+    if(options.where){
       record = record.filter(record => {
-        return Object.keys(where).every(filter => {
-            return where[filter] === record[filter]
+        return Object.keys(options.where).every(filter => {
+            return options.where[filter] === record[filter]
         });
       })
+    }
+    // order by
+    if(options.order){
+      if(options.order[0] === 'ASC' || options.order[0] === 'asc') {
+        record = record.sort((a, b) => {
+          (a[options[1]] > b[options[1]]) ? 1 : -1
+        })
+      } else if (options.order[0] === 'DESC' || options.order[0] === 'desc') {
+        record = record.sort((a, b) => {
+          (a[options[1]] > b[options[1]]) ? -1 : 1
+        })
+      }
+
     }
     return record
   } catch (error) {
