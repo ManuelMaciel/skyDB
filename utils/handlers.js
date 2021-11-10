@@ -1,7 +1,7 @@
 export const handleError = (error) => {
-  return `Warning: error message - ${error.message}`
+  return console.error(`Warning: error message - ${error.message}`)
 }
 
 export const handleMessage = (message) => {
-  return `Message: log message - ${message}`
+  return console.log(`Message: log message - ${message}`)
 }
