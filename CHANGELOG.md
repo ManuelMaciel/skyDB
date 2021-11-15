@@ -11,3 +11,6 @@
 - Created getById function that searches in the model only for the object with the id.
 - Created getAll function that fetches all objects.
 - getAll can filter using the where parameter and sort with the order parameter
+
+## 1.1.1 - Minor bugs fixes
+- Order by now is fixed.
