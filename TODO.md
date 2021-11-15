@@ -1,4 +1,4 @@
-# SkyDB TOOD
+# SkyDB TODO
 
 ### Incompleted
 - [ ] the search parameter order does not sort in descending or ascending order ~3d #task 2021-11-14
