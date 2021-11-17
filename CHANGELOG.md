@@ -14,3 +14,6 @@
 
 ## 1.1.1 - Minor bugs fixes
 - Order by now is fixed.
+
+## 1.1.2 - Remove and Update function
+- The update and delete functions have been updated, now with support for the model
