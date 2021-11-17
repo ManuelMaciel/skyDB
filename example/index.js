@@ -1,4 +1,4 @@
-import { create, connection, getById, getAll, update } from '../src/db'
+import { create, connection, getById, getAll, update, remove } from '../src/db'
 // create('users', { fieldName: 'manuel' })
 // connection('users')
 // const getData = async () => {
@@ -19,3 +19,10 @@ import { create, connection, getById, getAll, update } from '../src/db'
 //   console.log(value)
 // }
 // updateData()
+
+// const removeData = async () => {
+//   const value = await remove('users', 'v2dw1efZ5a')
+//   console.log(value)
+// }
+
+// removeData()

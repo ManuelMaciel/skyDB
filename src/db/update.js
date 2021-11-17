@@ -39,7 +39,7 @@ export const update = async (model, id, options = {}) => {
       newRecord,
       ...storage.slice(existRecordIndex + 1)
     ]
-    console.log("updatedStorage: ",updatedStorage)
+
     await fs.writeJSON(`${fullPath}/${model}.json`, updatedStorage)
 
     return newRecord
