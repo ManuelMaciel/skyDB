@@ -1,4 +1,4 @@
-import { create, connection, getById, getAll } from '../src/db'
+import { create, connection, getById, getAll, update } from '../src/db'
 // create('users', { fieldName: 'manuel' })
 // connection('users')
 // const getData = async () => {
@@ -7,9 +7,15 @@ import { create, connection, getById, getAll } from '../src/db'
 // }
 
 // getData()
-const getAllData = async () => {
-  const value = await getAll('users', {order: ['DESC', 'fieldName']})
-  console.log(value)
-}
+// const getAllData = async () => {
+//   const value = await getAll('users', {order: ['DESC', 'fieldName']})
+//   console.log(value)
+// }
 
-getAllData()
+// getAllData()
+
+// const updateData = async () => {
+//   const value = await update('users', 'v2dw1efZ5a', {'fieldName': 'alejandro'})
+//   console.log(value)
+// }
+// updateData()
