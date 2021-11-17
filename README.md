@@ -19,9 +19,9 @@
 so far you can create templates (kind of like documents), create data, search, filter, update and remove
 
 ### 🏠 [Homepage](https://github.com/ManuelMaciel/skyDB#readme)
-<center>
+<p align="center">
     <a href="https://ibb.co/mbBpbxK"><img src="https://i.ibb.co/mbBpbxK/DB-1.png" alt="DB-1" border="0"></a>
-</center>
+</p>
 
 ## Install
 
