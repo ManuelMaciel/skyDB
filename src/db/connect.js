@@ -1,6 +1,6 @@
 import fs from 'fs-extra'
-import { fullPath } from '../../constants/index'
-import { handleMessage, handleError } from '../../utils/index'
+import { fullPath } from '../constants/index'
+import { handleMessage, handleError } from '../utils/index'
 
 export const connection = async (model) => {
   // validations

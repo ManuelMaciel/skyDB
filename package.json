@@ -1,14 +1,13 @@
 {
   "name": "skydb",
-  "version": "1.1.2",
+  "version": "1.1.10",
   "description": "a JSON database",
   "main": "index.js",
   "scripts": {
     "test": "jest",
     "build": "babel index.js -d dist",
     "prepublish": "babel src/ --out-dir lib",
-    "start": "babel-node example/index.js",
-    "buildpackage": "cd lib && npm pack"
+    "start": "babel-node example/index.js"
   },
   "repository": {
     "type": "git",
@@ -47,6 +46,7 @@
   "dependencies": {
     "fs-extra": "^10.0.0",
     "i": "^0.3.7",
-    "npm": "^8.1.2"
+    "npm": "^8.1.4",
+    "prepublish": "^2.2.0"
   }
 }

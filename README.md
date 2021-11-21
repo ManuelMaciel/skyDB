@@ -31,8 +31,68 @@ npm install
 
 ## Usage
 
-```sh
-npm run start
+
+* *create model*
+- parameters: `model: model name`
+```js
+import skyDB from 'skydb/lib'
+skyDB.connection('users');
+```
+
+*create records*
+- parameters: `model: model name, options: {data to be saved, pass as an object}`
+```js
+import skyDB from 'skydb/lib'
+skyDB.create('users', { 'fieldName': 'manuel', 'age': 18 })
+```
+
+* *get data by id*
+- parameters: `model: model name, id: record id`
+```js
+import skyDB from 'skydb/lib'
+const getDataById = async () => {
+   const value = await skyDB.getById('users','v2dw1efZ5a')
+   console.log(value)
+}
+
+getDataById()
+```
+
+* *get all data*
+- parameters: `model: model name, options: {order: [DESC or ASC, the name of the model data key], where: {the name of the model data key: value you want to find}}`
+```js
+import skyDB from 'skydb/lib'
+const getAllData = async () => {
+ const value = await skyDB.getAll('users', {order: ['DESC', 'fieldName'], where: {'fieldName': 'manuel'}})
+ console.log(value)
+}
+getAllData()
+
+```
+
+* *update records*
+- parameters: `model: model name, id: record id, options: {value you want to find want to find}`
+
+```js
+import skyDB from 'skydb/lib'
+const updateData = async () => {
+ const value = await skyDB.update('users', 'v2dw1efZ5a', {'fieldName': 'manuel'})
+ console.log(value)
+}
+
+updateData()
+```
+
+* *remove records*
+- parameters: `model: model name, id: id of the record to be deleted`
+```js
+import skyDB from 'skydb/lib'
+const removeData = async () => {
+ const value = await skyDB.remove('users', 'v2dw1efZ5a')
+ console.log(value)
+}
+
+removeData()
 ```
 
 ## Run tests

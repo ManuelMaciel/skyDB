@@ -1,6 +1,6 @@
-import { create, connection, getById, getAll, update, remove } from '../src/db'
+import skyDB from 'skydb/lib'
 // create('users', { fieldName: 'manuel' })
-// connection('users')
+skyDB.connection('users')
 // const getData = async () => {
 //   const value = await getById('users','v2dw1efZ5a')
 //   console.log(value)

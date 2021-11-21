@@ -1,7 +1,7 @@
 import fs from 'fs-extra'
 
-import { handleError, handleMessage, genId } from '../../utils'
-import { fullPath } from '../../constants'
+import { handleError, handleMessage, genId } from '../utils'
+import { fullPath } from '../constants'
 
 export const create = async (model, options = {}) => {
   // validations
