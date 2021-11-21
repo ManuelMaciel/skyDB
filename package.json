@@ -6,7 +6,9 @@
   "scripts": {
     "test": "jest",
     "build": "babel index.js -d dist",
-    "start": "babel-node example/index.js"
+    "prepublish": "babel src/ --out-dir lib",
+    "start": "babel-node example/index.js",
+    "buildpackage": "cd lib && npm pack"
   },
   "repository": {
     "type": "git",
