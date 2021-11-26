@@ -23,6 +23,11 @@ so far you can create templates (kind of like documents), create data, search, f
     <a href="https://ibb.co/mbBpbxK"><img src="https://i.ibb.co/mbBpbxK/DB-1.png" alt="DB-1" border="0"></a>
 </p>
 
+## TODO
+[TODO](https://github.com/ManuelMaciel/skyDB/blob/master/TODO.md).
+
+***
+
 ## Install
 
 ```sh
